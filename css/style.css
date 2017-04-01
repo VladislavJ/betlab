@@ -1,0 +1,185 @@
+body{
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #00695c;
+	position: relative;
+	/*animation: bg 5s linear alternate infinite;*/
+}
+h3{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 50px;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 15px 0;
+	font-weight: 300;
+	/*animation: text 2s linear alternate infinite;*/
+}
+a{
+	text-decoration: none;
+	font-size: 35px;
+	margin: 0 5px;
+}
+.tooltip{
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 20px;
+	color: #fff;
+	opacity: 0;
+	transition: 0.3s;
+}
+.wrp:hover .tooltip{
+	opacity: 1;
+	right: -50px;
+	top: 0;
+}
+.wrp{
+	position: relative;
+}
+/*.magic{
+	color: #fff;
+	font-size: 25px !important;
+	cursor: pointer;
+	text-transform: uppercase;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	border: 1px solid #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+}*/
+.card{
+	width: 300px;
+	height: 300px;
+	position: relative;
+}
+.card--show-back .info{
+	transform: rotateY(0);
+	z-index: 2;
+	box-shadow: 0 0 2px 0 rgba(0,0,0,.3);
+}
+.card--show-back .ava {
+	transform: rotateY(180deg);
+	z-index: 1;
+	box-shadow: none;
+}
+.ava, .info{
+	backface-visibility:hidden; 
+	transition: transform .6s cubic-bezier(.39,.2,.37,1.44);
+	border-radius: 4px;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;  
+	flex-direction: column;
+	box-sizing: border-box;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+.info{
+	background: url(../ava2.jpg);
+	background-position: -110px -10px;
+	background-size: 200%;
+	border: 2px solid #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: rotateY(-180deg);
+	z-index: 1;
+}
+.ava{
+	background: url(../ava3.jpg);
+	background-position: -110px -10px;
+	background-size: 200%;
+/*	animation: ava 10s cubic-bezier(0.25,0.1,0.25,1);*/
+/*	transform: rotate(0deg);
+	transition: 2.5s;*/
+	position: relative;
+	box-shadow: 0 0 2px 0 rgba(0,0,0,.3);
+	overflow: hidden;
+	position: relative;
+	transform: rotateY(0);
+	z-index: 2;
+}
+.github, .codepen, .vk{
+	opacity: 0.7;
+	color: #24292e;
+	transition: opacity 0.3s, top 5s;
+	position: relative;
+}
+.github{
+	opacity: 0.6;
+}
+.github:hover, .vk:hover, .codepen:hover{
+	opacity: 1;
+	top: 2px;
+}
+/*@keyframes text{
+	from {
+		color: #2196f3;
+	}
+	10%{
+		color: #f50057;
+	}
+	20%{
+		color: #e91e63;
+	}
+	30%{
+		color: #26c6da;
+	}
+	40% {
+		color: #aed581;
+	}
+	50% {
+		color:  #cddc39;
+	}
+	60% {
+		color: #ffeb3b;
+	}
+	70%{
+		color: #9c27b0;
+	}
+	80% {
+		color: #795548;
+	}
+	90%{
+		color: #ea80fc;
+	}
+	to {
+		color: #f44336;
+	}
+}*/
+@keyframes bg{
+	from {
+		background: #5c6bc0;
+	}
+	25%{
+		background: #3f51b5;
+	}
+	50%{
+		background: #3949ab;
+	}
+	75%{
+		background: #303f9f;
+	}
+	to {
+		background: #283593;
+	}
+}
